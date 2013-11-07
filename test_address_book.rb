@@ -25,28 +25,39 @@ def del(db, name)
    puts "entry deleted"
 end
 
+def save(db)
+  File.open('txt.txt', 'w') do |abook|  
+  abook.puts db.sort 
+  puts "here's your book, saved"
+end
+end
+
+
 puts "Usage:\n\tadd <name> <phone>\n\tshow\n\tfind <name>\n\tdel <name> \n\tindex\n\t"
 
 
--while(true) do
+-loop do
   print "> "
   command, name, phone = gets.split(" ")
   if command == "add"
     add(book, name, phone)
   elsif command == "show"
     show(book)
-    elsif command == "sort"
+  elsif command == "sort"
     sort(book)
   elsif command == "find"
     find(book, name)
   elsif command == "del"
     del(book, name)
-  elsif command == "stop"
-    break
+  elsif command == "save"
+    save(book)
+  elsif command == "exit"
+    exit 
   else 
     puts "bad command or file name" 
+
   end
   
-  
+
   
 end

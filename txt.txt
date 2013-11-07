@@ -1,3 +1,6 @@
-The File.open method can open the file in different modes like 'r' Read-only, starts at beginning of file (default); 'r+' Read/Write, starts at beginning of file; 'w' Write-only, truncates existing file to zero length or creates a new file for writing. File modes can work like:
-
-
+dvd
+666
+kkk
+999
+sms
+777
