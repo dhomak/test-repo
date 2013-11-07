@@ -1,4 +1,4 @@
-addresses = {}
+book = {}
 
 def add(db, name, phone)
   db[name] = phone
@@ -7,6 +7,12 @@ end
 
 def show(db)
   puts db 
+  puts "here's your book"
+end
+
+def sort(db)
+  puts db.sort 
+  puts "here's your book, sorted"
 end
 
 def find(db, name)
@@ -17,22 +23,22 @@ def del(db, name)
    db.delete(name)
 end
 
-puts "Usage:\n\tadd <name> <phone>\n\tshow\n\tfind <name>\n\tdel <name>"
+puts "Usage:\n\tadd <name> <phone>\n\tshow\n\tfind <name>\n\tdel <name> \n\tindex\n\t"
 
 
 while(true) do
   print "> "
   command, name, phone = gets.split(" ")
   if command == "add"
-    add(addresses, name, phone)
+    add(book, name, phone)
   elsif command == "show"
-    show(addresses)
-#    puts: "all entries"
+    show(book)
+    elsif command == "index"
+    sort(book)
   elsif command == "find"
-    find(addresses, name)
-#    puts "found:"
+    find(book, name)
   elsif command == "del"
-    del(addresses, name)
+    del(book, name)
   else 
     puts "bad command or file name" 
   end
