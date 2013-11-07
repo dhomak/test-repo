@@ -26,7 +26,7 @@ end
 puts "Usage:\n\tadd <name> <phone>\n\tshow\n\tfind <name>\n\tdel <name> \n\tindex\n\t"
 
 
-while(true) do
+until exit do
   print "> "
   command, name, phone = gets.split(" ")
   if command == "add"
@@ -39,6 +39,8 @@ while(true) do
     find(book, name)
   elsif command == "del"
     del(book, name)
+  elsif command == "stop"
+    break
   else 
     puts "bad command or file name" 
   end
