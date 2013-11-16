@@ -6,7 +6,6 @@
 #misplaced comment
 
 
-
 book = {}
 
 def add(db, name, phone)
@@ -15,8 +14,8 @@ def add(db, name, phone)
 end 
 
 def show(db)
+  puts "here's your book:"
   puts db 
-  puts "here's your book"
 end
 
 def sort(db)
@@ -47,7 +46,6 @@ end
 
 
 puts "Usage:\n\tadd <name> <phone>\n\tshow\n\tfind <name>\n\tdel <name> \n\tsort\n\t"
-
 
   loop do
   print "> "
