@@ -1,3 +1,10 @@
+#!/usr/bin/ruby
+#todo:
+#search
+#write to file
+#write NORMALLY
+
+
 book = {}
 
 def add(db, name, phone)
@@ -25,8 +32,9 @@ def del(db, name)
    puts "entry deleted"
 end
 
-def read(book)
-File.
+def read(book) #placeholder!! tk
+puts db[name] #fix it to read file from disk
+end
 
 def save(db)
   File.open('txt.txt', 'w') do |abook|  
@@ -39,26 +47,26 @@ end
 puts "Usage:\n\tadd <name> <phone>\n\tshow\n\tfind <name>\n\tdel <name> \n\tsort\n\t"
 
 
- loop do
+  loop do
   print "> "
   command, name, phone = gets.split(" ")
   case command
-   when "add"
+    when "add"
     add(book, name, phone)
-   when "show"
+    when "show"
     show(book)
-  when "sort"
+    when "sort"
     sort(book)
-  when "find"
+    when "find"
     find(book, name)
-  when "del"
+    when "del"
     del(book, name)
-  when "save"
+    when "save"
     save(book)
-  when "exit"
+    when "exit"
     exit 
   else 
     puts "bad command or file name" 
- end
+  end
     
 end
