@@ -1,17 +1,16 @@
 def hail_emperor(name)
-	greet = "All hail the Emperor " + name +"!"
-	return greet
+	greet = puts "All hail the Emperor #{name}!"
 end
 
 #here's our Emperors
 
-puts hail_emperor("Palpatine") 
-puts hail_emperor("of Dune")
-puts hail_emperor("Julius")
-puts hail_emperor("Cartman")
+emperors = ["Palpatine", "of Dune", "Julius", "Cartman", "Bastis"]
+  emperors.each do |title|
+   hail_emperor(title)
+end
+
 
 #and now for custom Emperor
-puts "\n Enter your own Emperor"
-joe = gets.chomp.first.upcase
-puts hail_emperor(joe)
-
+puts "\n Enter your own Emperor:"
+custom = gets.first.upcase
+puts hail_emperor(custom)
