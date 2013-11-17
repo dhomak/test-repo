@@ -13,8 +13,10 @@ shelf.each do|title,volume|
   puts "#{title}: #{volume}"
 end
 
-# now we try and get ONLY VOLUMES and put it in the array
-total_volume = (shelf.select { |title,volume|} )
+# now we try and get ONLY VOLUMES and put it into the array
+total_volume = []
+
+#total_volume = (shelf.select { |title,volume|} )
 
 
 
