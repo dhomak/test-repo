@@ -11,7 +11,7 @@
 
 #here we have our shelf in default state, in hash
 
-shelf = {"Sandman"=>88, "Dustman"=>75, "Superman"=>62, "BurningMan"=>88, "Countryman"=>14,}
+shelf = {"Sandman"=>88, "Dustman"=>75, "Superman"=>62, "BurningMan"=>88, "Countryman"=>14,"LegoMan"=>89,}
 
 #here we set max_volume of the shelf
 max_volume = 450
@@ -31,7 +31,7 @@ if
   total_volume <= max_volume
 	puts  "#{total_volume} pages out of 450. You're in the green! Stack it up, man."
 else 
-	puts "#{total_volume} pages out of 450. You crashed the shelf and paniked the kernel"
+	puts "#{total_volume} pages out of 450. You crashed the shelf and panicked the kernel"
 end
 
 #now we have to add user generated books, hoops and loops
