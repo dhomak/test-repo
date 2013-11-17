@@ -7,7 +7,7 @@
 #so we need to get integer, 'total_volume'
 #then we need a function to ADD another book (title and volume)
 #and now we need to check against the max_volume
-
+#todo: 
 
 #here we have our shelf in default state, in hash
 
@@ -18,23 +18,17 @@ max_volume = 450
 
 #now we print a list of our books just to be sure
 shelf.each do|title,volume|
-  puts "#{title}: #{volume}"
+  puts "#{title}: #{volume} pages"
 end
 
-# now we need to extract the volumes data and put them into array
-# redundant total_volume = [shelf.values]
-#and print em to be sure:
+#check the sum
 
 total_volume = shelf.values.reduce(0, &:+)
-puts total_volume #yeah, well, it works
+ #yeah, well, it works! (or even shelf.values.inject {|a,b|a+b})
 
+if
+  total_volume <= max_volume
+	puts  "#{total_volume} pages. You're in the green! Stack it up, man."
+end
 
-# or even shelf.values.inject {|a,b|a+b}
-
-#now we need to get the total volume and calculate the sum
-
-#and finally, we could check against max_volume
-
-
-#shelf.values.reduce(0, &:+)
-
+#now we have to add user generated books, loops and stuff
