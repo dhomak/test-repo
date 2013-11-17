@@ -26,9 +26,12 @@ end
 total_volume = shelf.values.inject(0){|sum,item| sum + item}
  #yeah, well, it works! (or even shelf.values.inject {|a,b|a+b})
 
+#compare our total to max & some other stuff
 if
   total_volume <= max_volume
-	puts  "#{total_volume} pages of 450. You're in the green! Stack it up, man."
+	puts  "#{total_volume} pages out of 450. You're in the green! Stack it up, man."
+else 
+	puts "#{total_volume} pages out of 450. You crashed the shelf and paniked the kernel"
 end
 
 #now we have to add user generated books, hoops and loops
