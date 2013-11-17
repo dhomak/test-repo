@@ -7,7 +7,7 @@
 #so we need to get integer, 'total_volume'
 #then we need a function to ADD another book (title and volume)
 #and now we need to check against the max_volume
-#todo: 
+
 
 #here we have our shelf in default state, in hash
 
@@ -23,12 +23,14 @@ end
 
 #check the sum
 
-total_volume = shelf.values.reduce(0, &:+)
+total_volume = shelf.values.inject(0){|sum,item| sum + item}
  #yeah, well, it works! (or even shelf.values.inject {|a,b|a+b})
 
 if
   total_volume <= max_volume
-	puts  "#{total_volume} pages. You're in the green! Stack it up, man."
+	puts  "#{total_volume} pages of 450. You're in the green! Stack it up, man."
 end
 
-#now we have to add user generated books, loops and stuff
+#now we have to add user generated books, hoops and loops
+#todo: add the three books jumping at you at random
+#yay gaming: add the books until the shelf crashes
