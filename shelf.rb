@@ -34,6 +34,8 @@ else
 	puts "#{total_volume} pages out of 450. You crashed the shelf and panicked the kernel"
 end
 
+#emoji test
+
 #now we have to add user generated books, hoops and loops
 #todo: add the three books jumping at you at random
 #yay gaming: add the books until the shelf crashes
